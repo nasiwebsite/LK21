@@ -1,8 +1,8 @@
 $(".link-lightbox").on("click", function() {
-    if (window.innerHeight > 540) var object = (window.innerHeight - 540) / 2;
+    if (window.innerHeight > 540) var a = (window.innerHeight - 540) / 2;
     var b = '<iframe src="" width="640" height="480" id="video-embed" style="border:0;"></iframe>',
         c = '<div id="close-icon"></div>',
-        d = '<div class="lightbox" style="margin-top:' + object + 'px">',
+        d = '<div class="lightbox" style="margin-top:' + a + 'px">',
         e = '<div id="back-lightbox">',
         f = '<div id="background-close"></div>',
         g = '<div id="window">',
@@ -20,10 +20,10 @@ $(".link-lightbox").on("click", function() {
         })
     })
 }), $(document).on("keyup", function(a) {
-    27 == object.keyCode && $("#window").fadeOut(1e3, function() {
+    27 == a.keyCode && $("#window").fadeOut(1e3, function() {
         $(this).remove()
     })
 }), $(document).on("mouseover", function() {
-    var object = (window.innerHeight - 540) / 2;
-    $(".lightbox").attr("style", "margin-top:" + object + "px")
+    var a = (window.innerHeight - 540) / 2;
+    $(".lightbox").attr("style", "margin-top:" + a + "px")
 });
